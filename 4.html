@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title> Про мене</title>
+<style type="text/css">
+.my-list-item{color:green }
+</style>
+</head>
+<body>
+<h1> Про мене </h1>
+<ul>
+<li>Ім’я: <span id="name"></span>
+<li>Прізвище: <span id="lastname"></span>
+<li>Рідне місто: <span id="hometown"></span>
+</ul>
+<script>
+  document.body.style.fontFamily = 'Arial'
+  const username = document.querySelector('#name')
+  username.innerText += 'Diana'
+  const userlastnema = document.querySelector('#lastname')
+  userlastnema.innerText += 'Yeshchenko'
+  const userhometown = document.querySelector('#hometown')
+  userhometown.innerText += 'Kyiv'
+  const lis = document.querySelectorAll('li')
+  lis.forEach(elem =>{
+  elem.classList += 'my-list-item'
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1> Улюблені книги </h1>
+<script>
+ const book = [{
+ name:'Хоббит',
+ autor:'Джон Руэл Толкин',
+ data:1937},
+ {name:'Ведьмак',
+ autor:'Анджей Сапковский',
+ data:1993},
+ {name:'Сказания Меекханского пограничия:Север и Юг',
+ autor:'Роберт Венгер',
+ data:2006},
+ {name:'Путешествие к центру Земли',
+ autor:'Жюль Верн',
+ data:1864},
+ {name:'Хоримия',
+ autor:'Хагивара Дайскэ',
+ data:2011},]
+const manga = (bookarray) => {
+  const tup = document.createElement("ol")
+  bookarray.forEach(elem =>{
+  const tip = document.createElement("li")
+  tip.innerHTML = `<p>${elem.name}</p> <p>${elem.autor}</p> <p>${elem.data}</p>`
+			tup.append(tip)
+  })
+  document.body.append (tup)
+}
+manga(book)
+const ara = () => {
+const are = document.querySelectorAll("li")
+are.forEach(elem => {
+  elem.innerHTML += `<a href = 'http://nmu.npu.edu.ua/cgi-bin/timetable.cgi?n=700'>Ссылка на книгу</a>`
+})
+}
+ara()
+</script>
+</body>
+</html>
